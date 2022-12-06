@@ -63,6 +63,11 @@ public class Cronometro implements Runnable {
 	}
 
 	@Override
+	public String toString() {
+		return horas.intValue() + ":" + minutos.intValue() + ":" + segundos.intValue();
+	}
+
+	@Override
 	public void run() {
 		try {
 			while (!Thread.interrupted()) {

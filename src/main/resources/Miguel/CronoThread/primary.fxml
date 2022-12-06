@@ -2,14 +2,16 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Miguel.CronoThread.PrimaryController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Miguel.CronoThread.PrimaryController">
    <children>
-      <Button fx:id="start" layoutX="97.0" layoutY="297.0" mnemonicParsing="false" onAction="#startCrono" prefHeight="44.0" prefWidth="84.0" text="Start" />
-      <Button fx:id="stop" layoutX="258.0" layoutY="297.0" mnemonicParsing="false" onAction="#stopCrono" prefHeight="44.0" prefWidth="84.0" text="Stop" />
-      <Button fx:id="restart" layoutX="428.0" layoutY="297.0" mnemonicParsing="false" onAction="#restartCrono" prefHeight="44.0" prefWidth="84.0" text="Restart" />
+      <Button fx:id="start" layoutX="98.0" layoutY="253.0" mnemonicParsing="false" onAction="#startCrono" prefHeight="44.0" prefWidth="84.0" text="Start" />
+      <Button fx:id="stop" layoutX="258.0" layoutY="253.0" mnemonicParsing="false" onAction="#stopCrono" prefHeight="44.0" prefWidth="84.0" text="Stop" />
+      <Button fx:id="restart" layoutX="420.0" layoutY="253.0" mnemonicParsing="false" onAction="#restartCrono" prefHeight="44.0" prefWidth="84.0" text="Restart" />
       <Label fx:id="hours" layoutX="106.0" layoutY="106.0" prefHeight="59.0" prefWidth="67.0">
          <font>
             <Font size="30.0" />
@@ -32,5 +34,10 @@
             <Font size="29.0" />
          </font>
       </Label>
+      <TableView fx:id="tableTimes" layoutX="82.0" layoutY="349.0" prefHeight="200.0" prefWidth="477.0">
+        <columns>
+          <TableColumn fx:id="cellTimes" prefWidth="476.0" text="Times" />
+        </columns>
+      </TableView>
    </children>
 </Pane>
